@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <th>имя</th>
+            <th>фамилия</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script>
+        $.get("/records", function(data){
+            let list = JSON.parse(data);
+            let tbody = $("tbody");
+
+            list.forEach(function(item){
+                let row = $("<tr><td>" + item.name + "</td><td>" + item.second_name + "</td></tr>");
+                tbody.append(row);
+            })
+        })
+    </script>
+</body>
+</html>
