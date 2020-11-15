@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рейтинг</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div id="Rating">
+        <hi>{{ rating }}</hi>
+        <input type="range" v-model="rating" min="1" max="5" step="1">
+
+        <div id="Stars">
+            <p v-for="x in Number(rating)">&#11088</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

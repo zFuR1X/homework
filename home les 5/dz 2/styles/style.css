@@ -1,0 +1,22 @@
+html, body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#Rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#Stars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 12px;
+    margin-top: 40px;
+    transform: scale(3);
+}
